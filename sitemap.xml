@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
- <url><loc>https://nightlex.com/</loc><lastmod>2026-11-22</lastmod><xhtml:link rel="alternate" hreflang="uk" href="https://nightlex.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://nightlex.com/?lang=en"/><xhtml:link rel="alternate" hreflang="da" href="https://nightlex.com/?lang=da"/></url>
- <url><loc>https://nightlex.com/?lang=en</loc><lastmod>2026-11-22</lastmod><xhtml:link rel="alternate" hreflang="uk" href="https://nightlex.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://nightlex.com/?lang=en"/><xhtml:link rel="alternate" hreflang="da" href="https://nightlex.com/?lang=da"/></url>
- <url><loc>https://nightlex.com/?lang=da</loc><lastmod>2026-11-22</lastmod><xhtml:link rel="alternate" hreflang="uk" href="https://nightlex.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://nightlex.com/?lang=en"/><xhtml:link rel="alternate" hreflang="da" href="https://nightlex.com/?lang=da"/></url>
+ <url><loc>https://nightlex.com/</loc><lastmod>2026-11-22</lastmod><xhtml:link rel="alternate" hreflang="uk" href="https://nightlex.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://nightlex.com/en/"/><xhtml:link rel="alternate" hreflang="da" href="https://nightlex.com/da/"/></url>
+ <url><loc>https://nightlex.com/en/</loc><lastmod>2026-11-22</lastmod><xhtml:link rel="alternate" hreflang="uk" href="https://nightlex.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://nightlex.com/en/"/><xhtml:link rel="alternate" hreflang="da" href="https://nightlex.com/da/"/></url>
+ <url><loc>https://nightlex.com/da/</loc><lastmod>2026-11-22</lastmod><xhtml:link rel="alternate" hreflang="uk" href="https://nightlex.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://nightlex.com/en/"/><xhtml:link rel="alternate" hreflang="da" href="https://nightlex.com/da/"/></url>
  <url><loc>https://nightlex.com/privacy.html</loc></url>
  <url><loc>https://nightlex.com/credits.html</loc></url>
 </urlset>
