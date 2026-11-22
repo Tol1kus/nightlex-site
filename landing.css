@@ -303,7 +303,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 calc(30px + env(safe-area
  .story{grid-template-columns:1fr}
  .story-ph{display:none}
  .step{min-height:0;opacity:1;padding:0 0 46px}
- .m-shot{display:block;width:min(300px,78%);margin:22px auto 0;border-radius:32px;border:6px solid #1b1a1f;box-shadow:0 30px 60px -24px rgba(0,0,0,.8)}
+ .m-shot{display:block;width:min(230px,62%);height:auto;aspect-ratio:390/844;object-fit:cover;margin:26px auto 0;border-radius:30px;border:6px solid #26232b;background:#141317;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 30px 60px -24px rgba(0,0,0,.8),0 0 70px -10px color-mix(in srgb,var(--a) 45%,transparent)}
  .colors{grid-template-columns:1fr;padding:30px 22px}
  .col-ph .ph{width:min(270px,76%)}
  .bento{grid-template-columns:1fr}
@@ -352,3 +352,17 @@ footer{border-top:1px solid var(--line);padding:30px 0 calc(30px + env(safe-area
 .nt-btn svg{width:20px;height:20px;stroke-width:2.3}
 @media (max-width:980px){.natives{grid-template-columns:1fr}.nt-btn{flex:1 1 220px}}
 @media (max-width:560px){.natives{padding:18px}.nt-btn{min-width:0;flex:1 1 100%}}
+
+/* точні пропорції знімків (без обрізання й розтягування) */
+.ph{aspect-ratio:auto}.ph img{height:auto;aspect-ratio:390/844}
+/* ЦИФРИ */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding-top:56px}
+.stat{padding:26px 20px;border-radius:24px;border:1px solid var(--line);background:rgba(255,255,255,.03);text-align:center}
+.stat b{display:block;font:800 clamp(30px,3.6vw,46px)/1 var(--disp);letter-spacing:-.03em;background:linear-gradient(95deg,var(--a),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:10px;color:var(--mut);font-size:15px}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr;gap:10px;padding-top:40px}.stat{padding:20px 12px}}
+/* кнопка внизу на телефоні — з'являється після першого екрана */
+.m-cta{display:none}
+@media (max-width:760px){.m-cta{display:inline-flex;position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:30;height:56px;font-size:16px;transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}.m-cta.show{transform:none}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}}
+
+.m-shot{border:0!important;box-shadow:0 0 0 6px #26232b,0 0 0 7px rgba(255,255,255,.08),0 30px 60px -24px rgba(0,0,0,.8),0 0 70px -10px color-mix(in srgb,var(--a) 45%,transparent)!important;object-fit:contain!important}

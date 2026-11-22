@@ -8,7 +8,7 @@ function $(s,c){return (c||doc).querySelector(s)}function $$(s,c){return Array.p
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 
 /* ---------- мова ---------- */
-var EN={e_nat:'For native speakers',h_nat:'Are you a native speaker of Danish or English?',p_nat:'Help us check the game’s words and sentences — 10 minutes, no sign-up. Your answers are saved automatically.',n1:'Try it',n2:'How it works',n3:'Testers',n4:'FAQ',open:'Open',kick:'Beta · A1 → C2',
+var EN={st1:'words and phrases',st2:'texts to read',st3:'grammar lessons',st4:'six levels',e_nat:'For native speakers',h_nat:'Are you a native speaker of Danish or English?',p_nat:'Help us check the game’s words and sentences — 10 minutes, no sign-up. Your answers are saved automatically.',n1:'Try it',n2:'How it works',n3:'Testers',n4:'FAQ',open:'Open',kick:'Beta · A1 → C2',
 h1:'Danish and English.<br><span class="grad">A little every day.</span>',lead:'A language game: new words, sentences, texts and dialogues. Every word comes back right when you start to forget it.',
 start:'Start learning',tryit:'Try it here ↓',pl1:'No ads',pl2:'No tracking',pl3:'No sign-up',pl4:'iPhone · Android · PC',ch1:'→ cat',ch2:'Correct!',ch3:'new words today',
 e_try:'Try it right here',h_try:'One minute, and you’re learning Danish',q_tag:'New word · A1',q_ask:'What does it mean?',r_tag:'Reading · tap a word',r_hint:'Tap any word to see its translation.',r_note:'Every text in the game reads like this: everyday stories and texts about the country, from A1 to C2.',
@@ -93,7 +93,7 @@ if('IntersectionObserver' in window&&shot){var cur='';var io=new IntersectionObs
 var palShot=$('#palShot'),PAL=dayPal,MODE='dark';
 function palApply(){$$('.sw').forEach(function(b){b.setAttribute('aria-checked',b.getAttribute('data-pal')===PAL?'true':'false')});
  $$('.daynight button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-mode')===MODE?'true':'false')});
- root.setAttribute('data-accent',PAL);if(!palShot)return;var src='img/pal_'+(MODE==='light'?'light_':'')+PAL+'.jpg';palShot.classList.add('fade');var im=new Image();im.onload=function(){palShot.src=src;palShot.classList.remove('fade')};im.src=src}
+ root.setAttribute('data-accent',PAL);if(!palShot)return;var src='img/pal_'+(MODE==='light'?'light_':'')+PAL+'.webp';palShot.classList.add('fade');var im=new Image();im.onload=function(){palShot.src=src;palShot.classList.remove('fade')};im.src=src}
 $$('.sw').forEach(function(b){b.addEventListener('click',function(){PAL=b.getAttribute('data-pal');palApply()})});
 $$('.daynight button').forEach(function(b){b.addEventListener('click',function(){MODE=b.getAttribute('data-mode');palApply()})});
 
@@ -112,6 +112,18 @@ if(/android/i.test(navigator.userAgent))tab('tab-and');
 /* ---------- поява при прокрутці ---------- */
 if('IntersectionObserver' in window&&!reduce){var ro=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');ro.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px'});
  $$('.reveal').forEach(function(el){ro.observe(el)})}else $$('.reveal').forEach(function(el){el.classList.add('in')});
+
+/* ---------- цифри: «набігають» при появі ---------- */
+(function(){var els=$$('.stat b[data-count]');if(!els.length)return;
+ function fmt(n){var t=String(n);if(n>=1000)t=t.slice(0,-3)+(LANG==='en'?',':' ')+t.slice(-3);return t}
+ function run(el){var to=+el.getAttribute('data-count'),suf=el.getAttribute('data-suf')||'',t0=null;if(reduce){el.textContent=fmt(to)+suf;return}
+  function st(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1400),e=1-Math.pow(1-k,3);el.textContent=fmt(Math.round(to*e))+suf;if(k<1)requestAnimationFrame(st)}requestAnimationFrame(st)}
+ if('IntersectionObserver' in window){var o=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){run(en.target);o.unobserve(en.target)}})},{threshold:.6});els.forEach(function(e){o.observe(e)})}else els.forEach(run)})();
+
+/* ---------- кнопка внизу на телефоні: після першого екрана, ховається біля фінальної кнопки ---------- */
+(function(){var c=$('#mCta'),h=$('.hero .ctas'),f=$('.final');if(!c||!h||!('IntersectionObserver' in window))return;var heroVis=true,finVis=false;
+ function upd(){c.classList.toggle('show',!heroVis&&!finVis)}
+ new IntersectionObserver(function(es){heroVis=es[0].isIntersecting;upd()}).observe(h);if(f)new IntersectionObserver(function(es){finVis=es[0].isIntersecting;upd()}).observe(f)})();
 
 /* старт */
 setLang(startLang);palApply();
