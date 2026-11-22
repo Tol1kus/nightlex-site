@@ -1,209 +1,226 @@
 <!doctype html>
-<html lang="uk">
+<html lang="uk" data-accent="rose">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <title>NightLex — данська й англійська для українців</title>
-<meta name="description" content="Гра для вивчення данської та англійської: нові слова, речення, читання й розмова — від A1 до C2, у своєму темпі.">
-<meta name="theme-color" content="#141317">
+<meta name="description" content="Гра для вивчення данської та англійської: нові слова, речення, читання й розмова — від A1 до C2, у своєму темпі. Без реклами й стеження.">
+<meta name="theme-color" content="#121115">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preload" href="fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="NightLex — данська й англійська для українців">
-<meta property="og:description" content="Нові слова, речення, читання й розмова — від A1 до C2, у своєму темпі.">
-<meta property="og:image" content="https://nightlex.com/img/home.jpg">
-<style>
-@font-face{font-family:'Golos Text';font-weight:400 800;font-display:swap;src:url(fonts/golos-text-cyrillic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
-@font-face{font-family:'Golos Text';font-weight:400 800;font-display:swap;src:url(fonts/golos-text-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Golos Text';font-weight:400 800;font-display:swap;src:url(fonts/golos-text-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Unbounded';font-weight:600 800;font-display:swap;src:url(fonts/unbounded-cyrillic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
-@font-face{font-family:'Unbounded';font-weight:600 800;font-display:swap;src:url(fonts/unbounded-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Unbounded';font-weight:600 800;font-display:swap;src:url(fonts/unbounded-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-:root{--bg:#141317;--bg2:#1d1b21;--s1:#25232a;--line:#3a3640;--tx:#f4f1ee;--mut:#b4aeb8;--rose:#FFA5B8;--lav:#BBA8FF;--sage:#A6DB86;--sand:#FFC98F;--disp:'Unbounded',system-ui,sans-serif;--body:'Golos Text',system-ui,-apple-system,sans-serif;color-scheme:dark}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:radial-gradient(900px 600px at 85% -10%,rgba(255,165,184,.16),transparent 60%),radial-gradient(700px 500px at -10% 30%,rgba(187,168,255,.10),transparent 60%),linear-gradient(180deg,var(--bg),#221d25 100%) var(--bg);color:var(--tx);font:17px/1.55 var(--body);overflow-x:hidden}
-a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-/* верхній рядок */
-.top{display:flex;align-items:center;justify-content:space-between;padding:calc(18px + env(safe-area-inset-top)) 0 18px}
-.logo{display:inline-flex;align-items:center;gap:2px;font:800 22px/1 var(--disp);text-decoration:none;letter-spacing:-.01em}
-.logo .lx{background:linear-gradient(90deg,var(--rose),var(--lav) 45%,var(--sage) 75%,var(--sand));-webkit-background-clip:text;background-clip:text;color:transparent}
-.logo svg{width:15px;height:15px;margin:-14px 0 0 3px;fill:var(--rose)}
-.lang{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03)}
-.lang button{all:unset;cursor:pointer;padding:6px 12px;border-radius:999px;font:700 13px/1 var(--body);color:var(--mut)}
-.lang button[aria-pressed="true"]{background:var(--rose);color:#2a1620}
-.lang button:focus-visible,.btn:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
-/* перший екран */
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:40px 0 72px}
-.kick{display:inline-flex;align-items:center;gap:8px;font:700 13px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--rose)}
-.kick i{width:8px;height:8px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 4px rgba(166,219,134,.18)}
-h1{font:800 clamp(34px,5.4vw,60px)/1.06 var(--disp);letter-spacing:-.02em;margin:18px 0 18px}
-h1 em{font-style:normal;color:var(--rose)}
-.lead{font-size:clamp(17px,1.6vw,20px);color:var(--mut);max-width:34em;margin:0 0 30px}
-.ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;font:800 16px/1 var(--disp);text-decoration:none;transition:transform .15s}
-.btn.main{background:linear-gradient(100deg,#f29bb0,var(--rose) 50%,#ffc7d3);color:#1e1016;box-shadow:0 10px 40px -8px rgba(255,165,184,.55)}
-.btn.ghost{border:1.5px solid var(--line);color:var(--tx)}
-.btn:active{transform:scale(.98)}
-.btn svg{width:18px;height:18px}
-.note{margin-top:16px;font-size:14px;color:var(--mut)}
-.flags{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.flag{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--s1);border:1px solid var(--line);font-size:14px;font-weight:600}
-.flag b{font:800 11px/1 var(--disp);padding:4px 6px;border-radius:6px;background:var(--rose);color:#2a1620}
-.flag.en b{background:var(--lav)}
-/* телефони */
-.phones{position:relative;height:600px}
-.phone{position:absolute;width:270px;aspect-ratio:390/844;border-radius:38px;overflow:hidden;border:7px solid #0b0a0d;box-shadow:0 30px 80px -20px rgba(0,0,0,.7),0 0 0 1px #3a3640;background:#141317}
-.phone img{width:100%;height:100%;object-fit:cover;display:block}
-.phone.a{right:150px;top:30px;transform:rotate(-6deg)}
-.phone.b{right:0;top:0;transform:rotate(4deg);z-index:2}
-/* розділи */
-section{padding:72px 0}
-h2{font:800 clamp(26px,3.4vw,40px)/1.15 var(--disp);letter-spacing:-.015em;margin:0 0 14px}
-.sub{color:var(--mut);max-width:40em;margin:0 0 36px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{padding:24px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line)}
-.card .ic{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;background:rgba(255,165,184,.14);color:var(--rose)}
-.card:nth-child(3n+2) .ic{background:rgba(187,168,255,.14);color:var(--lav)}
-.card:nth-child(3n) .ic{background:rgba(166,219,134,.14);color:var(--sage)}
-.card .ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.card h3{font:700 19px/1.25 var(--body);margin:0 0 8px}
-.card p{margin:0;color:var(--mut);font-size:15.5px}
-/* темп */
-.paces{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.pace{padding:24px;border-radius:24px;background:var(--s1);border:1.5px solid var(--line)}
-.pace.rec{border-color:var(--rose);background:linear-gradient(180deg,rgba(255,165,184,.12),rgba(255,165,184,.03))}
-.pace .t{display:flex;align-items:center;gap:10px;font:800 20px/1.2 var(--disp)}
-.pace .t small{font:700 12px/1 var(--body);padding:5px 8px;border-radius:999px;background:var(--rose);color:#2a1620}
-.pace .n{font:800 44px/1 var(--disp);margin:18px 0 4px}
-.pace .n span{font:600 15px/1 var(--body);color:var(--mut);margin-left:6px}
-.pace p{margin:10px 0 0;color:var(--mut);font-size:15px}
-/* кроки */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
-.step{position:relative;padding:24px 24px 24px 76px;border-radius:24px;border:1px solid var(--line)}
-.step::before{counter-increment:s;content:counter(s);position:absolute;left:22px;top:22px;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 17px/1 var(--disp);background:var(--tx);color:var(--bg)}
-.step h3{margin:0 0 6px;font:700 18px/1.3 var(--body)}
-.step p{margin:0;color:var(--mut);font-size:15.5px}
-/* знімки */
-.shots{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 24px;margin:0 -20px;scrollbar-width:none}
-.shots::-webkit-scrollbar{display:none}
-.shots figure{flex:0 0 230px;margin:0;scroll-snap-align:center}
-.shots .phone{position:static;width:100%;border-width:6px;border-radius:32px;transform:none}
-.shots figcaption{margin-top:12px;font-size:14px;color:var(--mut);text-align:center}
-/* чесно */
-.honest{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.honest .card h3{display:flex;gap:10px;align-items:center}
-/* фінал */
-.final{text-align:center;padding:84px 24px;border-radius:32px;margin:24px 0 72px;background:radial-gradient(600px 300px at 50% 0,rgba(255,165,184,.2),transparent 70%),var(--bg2);border:1px solid var(--line)}
-.final .ctas{justify-content:center}
-footer{border-top:1px solid var(--line);padding:28px 0 calc(28px + env(safe-area-inset-bottom));color:var(--mut);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
-footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
-footer a{color:var(--mut);text-decoration:underline;text-underline-offset:3px}
-@media (max-width:900px){
- .hero{grid-template-columns:1fr;gap:12px;padding:16px 0 48px}
- .phones{height:480px;max-width:420px;width:100%;margin:12px auto 0}
- .phone{width:215px;border-width:6px;border-radius:32px}
- .phone.a{right:auto;left:0;top:30px}.phone.b{right:0}
- .grid,.paces,.steps,.honest{grid-template-columns:1fr}
- section{padding:48px 0}
-}
-@media (max-width:380px){.phone{width:190px}.phones{height:430px}.btn{width:100%}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
+<meta property="og:description" content="Щодня потроху: слова, речення, тексти й діалоги. Від A1 до C2, у своєму темпі.">
+<meta property="og:image" content="https://nightlex.com/img/card_pic.jpg">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
-<div class="wrap">
- <header class="top">
+<div class="sky" aria-hidden="true"><svg id="stars" width="100%" height="100%"></svg><div class="aurora"></div></div>
+
+<header class="nav" id="nav">
+ <div class="wrap nav-in">
   <a class="logo" href="./" aria-label="NightLex"><span>Night</span><span class="lx">Lex</span><svg viewBox="-10 -10 20 20" aria-hidden="true"><path d="M0 -9Q1.62 -1.62 9 0Q1.62 1.62 0 9Q-1.62 1.62 -9 0Q-1.62 -1.62 0 -9Z"/></svg></a>
-  <div class="lang" role="group" aria-label="Мова сторінки"><button data-set="uk" aria-pressed="true">UA</button><button data-set="en" aria-pressed="false">EN</button></div>
- </header>
+  <nav class="links" aria-label="Розділи"><a href="#try" data-t="n1">Спробувати</a><a href="#how" data-t="n2">Як це працює</a><a href="#testers" data-t="n3">Тестувальникам</a><a href="#faq" data-t="n4">Питання</a></nav>
+  <div class="nav-r">
+   <div class="lang" role="group" aria-label="Мова сторінки"><button data-set="uk" aria-pressed="true">UA</button><button data-set="en" aria-pressed="false">EN</button></div>
+   <a class="btn sm main" href="https://app.nightlex.com/" data-t="open">Відкрити</a>
+  </div>
+ </div>
+</header>
 
- <main>
-  <div class="hero">
-   <div>
-    <span class="kick"><i></i><span data-t="kick">Тестова версія · від A1 до C2</span></span>
-    <h1 data-t="h1" data-html>Данська та англійська — <em>у своєму темпі</em></h1>
-    <p class="lead" data-t="lead">Гра для українців: щодня нові слова, речення, слухання, читання і розмова. Слова повертаються саме тоді, коли ти починаєш їх забувати.</p>
-    <div class="ctas">
-     <a class="btn main" href="https://app.nightlex.com/"><span data-t="start">Почати вчити</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-     <a class="btn ghost" href="#how" data-t="how">Як це працює</a>
+<main>
+ <section class="hero wrap">
+  <div class="hero-txt">
+   <span class="kick reveal"><i></i><span data-t="kick">Тестова версія · A1 → C2</span></span>
+   <h1 class="reveal" data-t="h1" data-html>Данська й англійська.<br><span class="grad">Щодня потроху.</span></h1>
+   <p class="lead reveal" data-t="lead">Гра для українців: нові слова, речення, тексти й діалоги. Кожне слово повертається саме тоді, коли починаєш його забувати.</p>
+   <div class="ctas reveal">
+    <a class="btn main big" href="https://app.nightlex.com/"><span data-t="start">Почати вчити</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn ghost big" href="#try" data-t="tryit">Спробувати тут ↓</a>
+   </div>
+   <ul class="pills reveal" aria-label="Коротко">
+    <li data-t="pl1">Без реклами</li><li data-t="pl2">Без стеження</li><li data-t="pl3">Без реєстрації</li><li data-t="pl4">iPhone · Android · ПК</li>
+   </ul>
+  </div>
+  <div class="stage" id="stage" aria-hidden="true">
+   <div class="glow"></div>
+   <div class="ph ph-l"><img src="img/exercise.jpg" alt="" width="390" height="844"></div>
+   <div class="ph ph-r"><img src="img/read.jpg" alt="" width="390" height="844"></div>
+   <div class="ph ph-c"><img src="img/card_pic.jpg" alt="" width="390" height="844"></div>
+   <div class="chip c1"><b>en kat</b><span data-t="ch1">→ кіт</span></div>
+   <div class="chip c2"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-t="ch2">Правильно!</span></div>
+   <div class="chip c3"><b>+15</b><span data-t="ch3">нових слів сьогодні</span></div>
+  </div>
+ </section>
+
+ <div class="ticker" aria-hidden="true"><div class="tk-track" id="ticker"></div></div>
+
+ <section class="wrap sec" id="try">
+  <div class="sec-head reveal"><span class="eyebrow" data-t="e_try">Спробуй просто тут</span><h2 data-t="h_try">Одна хвилина — і ти вже вчиш данську</h2></div>
+  <div class="try reveal">
+   <div class="quiz" id="quiz">
+    <div class="q-top"><span class="tag" data-t="q_tag">Нове слово · A1</span><span class="q-n" id="qN">1 / 3</span></div>
+    <div class="q-pic"><img id="qPic" src="img/cat.webp" alt="" width="384" height="384"></div>
+    <div class="q-word" id="qWord" lang="da">en kat</div>
+    <p class="q-ask" data-t="q_ask">Що це означає?</p>
+    <div class="q-opts" id="qOpts"></div>
+    <div class="q-fb" id="qFb" aria-live="polite"></div>
+   </div>
+   <div class="reader">
+    <span class="tag" data-t="r_tag">Читання · торкнись слова</span>
+    <p class="rd-text" id="rdText" lang="da"></p>
+    <div class="rd-tip" id="rdTip" aria-live="polite"><span data-t="r_hint">Натисни будь-яке слово — побачиш переклад.</span></div>
+    <p class="rd-note" data-t="r_note">У грі так читаються всі тексти: історії з життя й тексти про країну, від A1 до C2.</p>
+   </div>
+  </div>
+ </section>
+
+ <section class="wrap sec" id="how">
+  <div class="sec-head reveal"><span class="eyebrow" data-t="e_how">Як це працює</span><h2 data-t="h_how">Твій план на кожен день</h2></div>
+  <div class="story">
+   <div class="story-ph"><div class="ph sticky"><img id="storyShot" src="img/pace.jpg" alt="" width="390" height="844"></div></div>
+   <ol class="steps">
+    <li class="step" data-shot="img/pace.jpg"><span class="num">01</span><h3 data-t="s1">Обери рівень і темп</h3><p data-t="s1p">Короткий тест покаже, з чого почати. Темп — твій: 10, 15 або 20 нових слів на день.</p><img class="m-shot" src="img/pace.jpg" alt="" loading="lazy" width="390" height="844"></li>
+    <li class="step" data-shot="img/home.jpg"><span class="num">02</span><h3 data-t="s2">Відкрий план дня</h3><p data-t="s2p">Повтор, нові слова, практика, текст або діалог. Крок за кроком — не треба думати, що робити далі.</p><img class="m-shot" src="img/home.jpg" alt="" loading="lazy" width="390" height="844"></li>
+    <li class="step" data-shot="img/card_pic.jpg"><span class="num">03</span><h3 data-t="s3">Вчи нові слова</h3><p data-t="s3p">Картинка, приклад у реченні й живий голос. Свайп вправо — знаю, вліво — ще ні.</p><img class="m-shot" src="img/card_pic.jpg" alt="" loading="lazy" width="390" height="844"></li>
+    <li class="step" data-shot="img/exercise.jpg"><span class="num">04</span><h3 data-t="s4">Помилився — зрозумів</h3><p data-t="s4p">Одразу коротке правило й приклад. Слово повернеться тоді, коли саме час його повторити.</p><img class="m-shot" src="img/exercise.jpg" alt="" loading="lazy" width="390" height="844"></li>
+   </ol>
+  </div>
+ </section>
+
+ <section class="wrap sec" id="colors">
+  <div class="colors reveal">
+   <div class="col-txt">
+    <span class="eyebrow" data-t="e_col">Щодня — новий колір</span>
+    <h2 data-t="h_col">Гра змінює настрій разом із тобою</h2>
+    <p class="sub" data-t="sub_col">Кожного дня — свій колір: лаванда, шавлія, пісок або троянда. Можна залишити улюблений, а вдень перемкнутися на світлу тему. Спробуй:</p>
+    <div class="swatches" role="radiogroup" aria-label="Колір">
+     <button class="sw" data-pal="lavender" role="radio" aria-checked="false"><i></i><span data-t="pal1">Лаванда</span></button>
+     <button class="sw" data-pal="sage" role="radio" aria-checked="false"><i></i><span data-t="pal2">Шавлія</span></button>
+     <button class="sw" data-pal="sand" role="radio" aria-checked="false"><i></i><span data-t="pal3">Пісок</span></button>
+     <button class="sw" data-pal="rose" role="radio" aria-checked="true"><i></i><span data-t="pal4">Троянда</span></button>
     </div>
-    <p class="note" data-t="note">Працює в браузері на iPhone, Android і комп’ютері — без реєстрації.</p>
-    <div class="flags"><span class="flag"><b>DA</b><span data-t="da">Данська</span></span><span class="flag en"><b>EN</b><span data-t="en">Англійська (США)</span></span></div>
+    <div class="daynight" role="group" aria-label="Тема"><button data-mode="dark" aria-pressed="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span data-t="m_dark">Ніч</span></button><button data-mode="light" aria-pressed="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span data-t="m_light">День</span></button></div>
    </div>
-   <div class="phones" aria-hidden="true">
-    <div class="phone a"><img src="img/card.jpg" alt="" width="390" height="844"></div>
-    <div class="phone b"><img src="img/home.jpg" alt="" width="390" height="844"></div>
+   <div class="col-ph"><div class="glow"></div><div class="ph"><img id="palShot" src="img/pal_rose.jpg" alt="" width="390" height="844"></div></div>
+  </div>
+ </section>
+
+ <section class="wrap sec">
+  <div class="sec-head reveal"><span class="eyebrow" data-t="e_feat">Що всередині</span><h2 data-t="h_feat">Усе, щоб заговорити</h2></div>
+  <div class="bento">
+   <div class="tile t-voice reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div><h3 data-t="f1">Живі голоси</h3><p data-t="f1p">Данські слова, речення й тексти озвучені природними голосами. Можна сповільнити.</p><div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+   <div class="tile t-fsrs reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div><h3 data-t="f2">Розумне повторення</h3><p data-t="f2p">Алгоритм FSRS рахує, коли повернути кожне слово, — щоб воно запам’ятовувалось надовго.</p><div class="curve" aria-hidden="true"><svg viewBox="0 0 300 70" preserveAspectRatio="none"><path class="cv" d="M0 6 C25 40 40 50 70 56 L70 10 C100 36 120 44 150 48 L150 8 C185 28 210 34 240 38 L240 6 C265 18 285 22 300 24"/><circle cx="70" cy="10" r="4"/><circle cx="150" cy="8" r="4"/><circle cx="240" cy="6" r="4"/></svg><small data-t="f2c">повтор — і пам’ять знову повна</small></div></div>
+   <div class="tile t-read reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h7a2 2 0 0 1 2 2v11a2 2 0 0 0-2-2H4zM20 6h-7v11h7z"/></svg></div><h3 data-t="f3">Справжні тексти</h3><p data-t="f3p">Історії з життя й тексти про країну за рівнями — з перекладом під пальцем.</p></div>
+   <div class="tile t-dlg reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z"/></svg></div><h3 data-t="f4">Діалоги з життя</h3><p data-t="f4p">Магазин, лікар, комуна, робота. Відповідаєш сам — і дізнаєшся, чому саме так.</p></div>
+   <div class="tile t-mist reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h3 data-t="f5">Пояснення помилок</h3><p data-t="f5p">Коротке правило одразу після помилки. Слова з помилками — у «Мої помилки».</p></div>
+   <div class="tile t-lv reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V14M10 20V9M16 20V5M22 20H2"/></svg></div><h3 data-t="f6">Від A1 до C2</h3><p data-t="f6p">Тисячі слів за темами життя, граматика й тексти на кожен рівень.</p><div class="lvls" aria-hidden="true"><b>A1</b><b>A2</b><b>B1</b><b>B2</b><b>C1</b><b>C2</b></div></div>
+  </div>
+ </section>
+
+ <section class="wrap sec" id="pace">
+  <div class="pace-box reveal">
+   <div>
+    <span class="eyebrow" data-t="e_pace">Темп обираєш сам</span>
+    <h2 data-t="h_pace">Скільки слів на день?</h2>
+    <div class="seg" role="radiogroup" aria-label="Темп">
+     <button data-n="10" role="radio" aria-checked="false"><svg viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15z"/><path d="M5 19c3-4 6-7 10-9"/></svg><span data-t="p1">Спокійно</span></button>
+     <button data-n="15" role="radio" aria-checked="true"><svg viewBox="0 0 24 24"><path d="M13 3L5 13h6l-1 8 8-10h-6z"/></svg><span data-t="p2">Швидко</span></button>
+     <button data-n="20" role="radio" aria-checked="false"><svg viewBox="0 0 24 24"><path d="M12 21a7 7 0 0 0 7-7c0-4-3-6.5-4-10-2 2-3 3.5-3 6-1-1-1.5-2-1.7-3.3C7.5 8.6 5 11 5 14a7 7 0 0 0 7 7z"/></svg><span data-t="p3">Інтенсивно</span></button>
+    </div>
+    <p class="sub small" data-t="pace_note">Змінити можна будь-коли в налаштуваннях гри.</p>
+   </div>
+   <div class="pace-out" aria-live="polite">
+    <div class="po"><b id="pN">15</b><span data-t="po1">нових слів на день</span></div>
+    <div class="po"><b id="pT">≈ 30</b><span data-t="po2">хвилин на день</span></div>
+    <div class="po"><b id="pM">≈ 3</b><span data-t="po3">місяці на рівень A1</span></div>
    </div>
   </div>
+ </section>
 
-  <section id="how">
-   <h2 data-t="h_feat">Що всередині</h2>
-   <p class="sub" data-t="sub_feat">Кожен день — короткий план, складений під тебе. Відкриваєш, проходиш крок за кроком і бачиш, як росте рівень.</p>
-   <div class="grid">
-    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3 data-t="f1">Тест рівня</h3><p data-t="f1p">Кілька хвилин — і гра знає, з чого почати: з нуля чи з A2, B1… Знайомі слова не доведеться вчити заново.</p></div>
-    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div><h3 data-t="f2">Розумне повторення</h3><p data-t="f2p">Алгоритм FSRS рахує, коли кожне слово повернути, щоб воно запам’яталось надовго, а не до завтра.</p></div>
-    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div><h3 data-t="f3">Живі голоси</h3><p data-t="f3p">Данські слова, речення й тексти озвучені природними голосами (англійська — скоро). Можна сповільнити — кнопка «повільно».</p></div>
-    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h7a2 2 0 0 1 2 2v11a2 2 0 0 0-2-2H4zM20 6h-7"/><path d="M20 6v11h-7"/></svg></div><h3 data-t="f4">Справжні тексти</h3><p data-t="f4p">Короткі історії з життя і тексти про країну. Торкнись слова — побачиш переклад.</p></div>
-    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z"/></svg></div><h3 data-t="f5">Діалоги й фрази</h3><p data-t="f5p">Ситуації з життя: магазин, лікар, комуна, робота. Відповідаєш сам — і дізнаєшся, чому саме так.</p></div>
-    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h3 data-t="f6">Пояснення помилок</h3><p data-t="f6p">Помилився — одразу коротке правило і приклад. Слова з помилками самі потрапляють у «Мої помилки».</p></div>
+ <section class="wrap sec">
+  <div class="honest reveal">
+   <span class="eyebrow" data-t="e_hon">Чесно</span>
+   <h2 data-t="h_hon">Ми ще тестуємо — і кажемо про це прямо</h2>
+   <div class="hon-grid">
+    <div><h3 data-t="h1c">Без реклами й стеження</h3><p data-t="h1cp">Прогрес зберігається на твоєму пристрої. Жодних рекламних трекерів і аналітики.</p></div>
+    <div><h3 data-t="h2c">Перевірка носіями</h3><p data-t="h2cp">Переклади, речення й тексти підготовлено за допомогою ШІ і вичитано моделлю. Зараз їх перевіряють носії мови.</p></div>
+    <div><h3 data-t="h3c">Помітив помилку?</h3><p data-t="h3cp">У грі: «Я» → «Повідомити про проблему». Можна додати знімок екрана — ми все читаємо.</p></div>
    </div>
-  </section>
-
-  <section>
-   <h2 data-t="h_pace">Темп обираєш сам</h2>
-   <p class="sub" data-t="sub_pace">Хтось має 30 хвилин увечері, хтось — годину. Темп можна змінити будь-коли в налаштуваннях.</p>
-   <div class="paces">
-    <div class="pace"><div class="t" data-t="p1">Спокійно</div><div class="n">10<span data-t="pw">нових слів на день</span></div><p data-t="p1p">≈ 30 хв на день · рівень A1 — приблизно за 4–5 місяців</p></div>
-    <div class="pace rec"><div class="t"><span data-t="p2">Швидко</span><small data-t="rec">радимо</small></div><div class="n">15<span data-t="pw">нових слів на день</span></div><p data-t="p2p">≈ 30 хв на день · рівень A1 — приблизно за 3 місяці</p></div>
-    <div class="pace"><div class="t" data-t="p3">Інтенсивно</div><div class="n">20<span data-t="pw">нових слів на день</span></div><p data-t="p3p">≈ 60 хв на день · рівень A1 — приблизно за 2 місяці, плюс вимова й будова речень</p></div>
-   </div>
-  </section>
-
-  <section>
-   <h2 data-t="h_steps">Як почати</h2>
-   <div class="steps">
-    <div class="step"><h3 data-t="s1">Відкрий гру</h3><p data-t="s1p">На телефоні можна додати на головний екран — відкривається як звичайний застосунок.</p></div>
-    <div class="step"><h3 data-t="s2">Пройди тест або почни з нуля</h3><p data-t="s2p">Обери мову, рівень і темп — план дня складеться сам.</p></div>
-    <div class="step"><h3 data-t="s3">Займайся щодня</h3><p data-t="s3p">Невеликими кроками: повтор, нові слова, практика, текст або діалог.</p></div>
-   </div>
-  </section>
-
-  <section>
-   <h2 data-t="h_shots">Як це виглядає</h2>
-   <div class="shots">
-    <figure><div class="phone"><img src="img/home.jpg" alt="Головний екран: план на сьогодні" data-alt="a1" loading="lazy" width="390" height="844"></div><figcaption data-t="c1">План на сьогодні</figcaption></figure>
-    <figure><div class="phone"><img src="img/card.jpg" alt="Картка нового слова з прикладом" data-alt="a2" loading="lazy" width="390" height="844"></div><figcaption data-t="c2">Нове слово з прикладом</figcaption></figure>
-    <figure><div class="phone"><img src="img/exercise.jpg" alt="Вправа з поясненням помилки" data-alt="a3" loading="lazy" width="390" height="844"></div><figcaption data-t="c3">Помилка — і одразу пояснення</figcaption></figure>
-    <figure><div class="phone"><img src="img/read.jpg" alt="Читання: тексти за рівнями" data-alt="a4" loading="lazy" width="390" height="844"></div><figcaption data-t="c4">Тексти за рівнями</figcaption></figure>
-   </div>
-  </section>
-
-  <section>
-   <h2 data-t="h_honest">Чесно про головне</h2>
-   <div class="honest">
-    <div class="card"><h3 data-t="h1c">Без реклами й стеження</h3><p data-t="h1cp">Прогрес зберігається на твоєму пристрої. Жодних рекламних трекерів і аналітики.</p></div>
-    <div class="card"><h3 data-t="h2c">Тестова версія</h3><p data-t="h2cp">Переклади, речення і тексти підготовлено за допомогою ШІ й вичитано моделлю; носії мови зараз їх перевіряють. Помітив помилку — напиши нам через «Я» → «Повідомити про проблему».</p></div>
-   </div>
-  </section>
-
-  <div class="final">
-   <h2 data-t="h_final">Перше заняття — сьогодні</h2>
-   <p class="sub" style="margin:0 auto 28px" data-t="sub_final">Почни з тесту рівня або з першого слова.</p>
-   <div class="ctas"><a class="btn main" href="https://app.nightlex.com/"><span data-t="start">Почати вчити</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   </div>
- </main>
-</div>
+ </section>
+
+ <section class="wrap sec" id="testers">
+  <div class="sec-head reveal"><span class="eyebrow" data-t="e_tst">Тестувальникам</span><h2 data-t="h_tst">Постав NightLex на екран телефона</h2><p class="sub" data-t="sub_tst">Тоді гра відкривається як звичайний застосунок — на весь екран, з іконкою. Це займає 20 секунд.</p></div>
+  <div class="os-tabs reveal" role="tablist">
+   <button role="tab" id="tab-ios" aria-selected="true" aria-controls="pane-ios">iPhone · Safari</button>
+   <button role="tab" id="tab-and" aria-selected="false" aria-controls="pane-and">Android · Chrome</button>
+  </div>
+  <div class="os-pane" id="pane-ios" role="tabpanel" aria-labelledby="tab-ios">
+   <div class="inst">
+    <figure><div class="mini">
+      <div class="m-body m-app"><img src="img/home.jpg" alt=""></div>
+      <div class="m-tool"><span class="m-url">app.nightlex.com</span><div class="m-icons"><i></i><i></i><i class="hl"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5M5 13v7h14v-7"/></svg></i><i></i><i></i></div></div>
+     </div><figcaption><b>1</b><span data-t="i1" data-html>Відкрий <u>app.nightlex.com</u> у Safari і натисни «Поділитися» <span class="kbd">⬆︎</span> внизу.</span></figcaption></figure>
+    <figure><div class="mini">
+      <div class="m-body m-app m-dim"><img src="img/home.jpg" alt=""></div>
+      <div class="m-sheet"><div class="ms-head"><img src="icon-180.png" alt=""><span>NightLex</span></div><div class="ms-row"><span data-t="ms1">Копіювати</span></div><div class="ms-row"><span data-t="ms2">Додати закладку</span></div><div class="ms-row hl"><span data-t="ms3">На екран «Додому»</span><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg></div><div class="ms-row"><span data-t="ms4">Друкувати</span></div></div>
+     </div><figcaption><b>2</b><span data-t="i2">Прогорни список, обери «На екран "Додому"», потім «Додати».</span></figcaption></figure>
+    <figure><div class="mini m-home">
+      <div class="hs"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="nx"><img src="icon-180.png" alt=""><span>NightLex</span></i><i></i><i></i><i></i><i></i></div>
+     </div><figcaption><b>3</b><span data-t="i3">Готово! Іконка NightLex на екрані — відкривай звідти щодня.</span></figcaption></figure>
+   </div>
+  </div>
+  <div class="os-pane" id="pane-and" role="tabpanel" aria-labelledby="tab-and" hidden>
+   <div class="inst">
+    <figure><div class="mini">
+      <div class="m-chrome"><span class="m-url">app.nightlex.com</span><i class="hl dots"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg></i></div>
+      <div class="m-body m-app"><img src="img/home.jpg" alt=""></div>
+     </div><figcaption><b>1</b><span data-t="a1" data-html>Відкрий <u>app.nightlex.com</u> у Chrome і натисни меню <span class="kbd">⋮</span> угорі праворуч.</span></figcaption></figure>
+    <figure><div class="mini">
+      <div class="m-chrome"><span class="m-url">app.nightlex.com</span><i class="dots"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg></i></div>
+      <div class="m-body m-app m-dim"><img src="img/home.jpg" alt=""></div>
+      <div class="m-menu"><div class="ms-row"><span data-t="am1">Нова вкладка</span></div><div class="ms-row"><span data-t="am2">Історія</span></div><div class="ms-row hl"><span data-t="am3">Додати на головний екран</span></div><div class="ms-row"><span data-t="am4">Налаштування</span></div></div>
+     </div><figcaption><b>2</b><span data-t="a2">Обери «Додати на головний екран» (або «Установити застосунок»), потім «Додати».</span></figcaption></figure>
+    <figure><div class="mini m-home">
+      <div class="hs"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="nx"><img src="icon-180.png" alt=""><span>NightLex</span></i><i></i><i></i><i></i><i></i></div>
+     </div><figcaption><b>3</b><span data-t="a3">Готово! Відкривай NightLex з головного екрана.</span></figcaption></figure>
+   </div>
+  </div>
+  <p class="note-c" data-t="inst_note">Назви пунктів можуть трохи відрізнятися залежно від версії телефона.</p>
+  <div class="tst-links reveal">
+   <a class="tl" href="https://app.nightlex.com/test.html"><b data-t="tl1">Інструкція для тестувальників →</b><span data-t="tl1p">План на 7 днів, анкета, як надіслати знімок екрана</span></a>
+   <a class="tl" href="https://app.nightlex.com/check.html"><b data-t="tl2">Ти носій данської чи англійської? →</b><span data-t="tl2p">Допоможи перевірити речення — 10 хвилин, відповіді зберігаються самі</span></a>
+  </div>
+ </section>
+
+ <section class="wrap sec" id="faq">
+  <div class="sec-head reveal"><span class="eyebrow" data-t="e_faq">Питання</span><h2 data-t="h_faq">Що зазвичай питають</h2></div>
+  <div class="faq reveal">
+   <details><summary data-t="q1">Це безкоштовно?</summary><p data-t="a1x">Так, під час тестування все безкоштовно і без реклами.</p></details>
+   <details><summary data-t="q2">Потрібна реєстрація?</summary><p data-t="a2x">Ні. Відкриваєш і вчишся — прогрес зберігається на твоєму пристрої.</p></details>
+   <details><summary data-t="q3">Я зовсім новачок. Мені підійде?</summary><p data-t="a3x">Так. Обери «Я зовсім новачок» — і почнеш з першого слова. Якщо вже щось знаєш, тест рівня зарахує знайомі слова.</p></details>
+   <details><summary data-t="q4">Які мови можна вчити?</summary><p data-t="a4x">Данську та американську англійську — з українським інтерфейсом. Данську також можна вчити з англійським інтерфейсом.</p></details>
+   <details><summary data-t="q5">Чому тексти зроблено за допомогою ШІ?</summary><p data-t="a5x">Так ми змогли підготувати тисячі слів, речень і текстів для всіх рівнів. Усе вичитано моделлю, а зараз носії мови перевіряють рядок за рядком — помилки виправляємо.</p></details>
+   <details><summary data-t="q6">Скільки часу треба на день?</summary><p data-t="a6x">Приблизно 30 хвилин у темпах «Спокійно» і «Швидко», близько години — в «Інтенсивно». Темп можна змінити будь-коли.</p></details>
+  </div>
+ </section>
+
+ <section class="wrap">
+  <div class="final reveal">
+   <h2 data-t="h_final" data-html>Перше слово —<br><span class="grad">сьогодні ввечері.</span></h2>
+   <p class="sub" data-t="sub_final">Почни з тесту рівня або з першого слова.</p>
+   <a class="btn main big" href="https://app.nightlex.com/"><span data-t="start">Почати вчити</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+ </section>
+</main>
+
 <footer>
- <div class="wrap">
-  <span>© 2026 NightLex</span>
-  <nav>
-   <a href="https://app.nightlex.com/test.html" data-t="ft1">Для тестувальників</a>
-   <a href="https://app.nightlex.com/check.html" data-t="ft2">Перевірка носіями</a>
-   <a href="credits.html" data-t="ft3">Джерела й ліцензії</a>
-  </nav>
+ <div class="wrap foot">
+  <a class="logo sm" href="./" aria-label="NightLex"><span>Night</span><span class="lx">Lex</span></a>
+  <nav><a href="https://app.nightlex.com/test.html" data-t="ft1">Для тестувальників</a><a href="https://app.nightlex.com/check.html" data-t="ft2">Перевірка носіями</a><a href="credits.html" data-t="ft3">Джерела й ліцензії</a></nav>
+  <span class="copy">© 2026 NightLex</span>
  </div>
 </footer>
 <script src="landing.js"></script>
