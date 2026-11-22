@@ -58,6 +58,8 @@ var PALS=['lavender','sage','sand','rose'];
 var dayPal=PALS[Math.floor(Date.now()/864e5)%4];
 root.setAttribute('data-accent',dayPal);
 
+function shotSrc(n){return 'img/'+n+'_'+(root.getAttribute('data-accent')||'rose')+'.webp'}
+function shotsRecolor(){var ss=doc.getElementById('storyShot');if(ss)ss.setAttribute('src',ss.getAttribute('src').replace(/_(lavender|sage|sand|rose)\.webp/,'_'+(root.getAttribute('data-accent')||'rose')+'.webp'));$$('img[data-ps]').forEach(function(i){var s=shotSrc(i.getAttribute('data-ps'));if(i.getAttribute('src')!==s)i.setAttribute('src',s)})}
 /* ---------- зоряне небо ---------- */
 (function stars(){var svg=$('#stars');if(!svg)return;var n=window.innerWidth<700?55:110,h='';
  for(var i=0;i<n;i++){var x=(Math.random()*100).toFixed(2),y=(Math.random()*100).toFixed(2),r=(Math.random()*1.1+.3).toFixed(2),o=(Math.random()*.6+.25).toFixed(2);
@@ -104,14 +106,14 @@ doc.addEventListener('click',function(e){var b=e.target.closest('#rdText button'
 /* ---------- «як це працює»: телефон показує екран поточного кроку ---------- */
 var shot=$('#storyShot'),steps=$$('.step');
 if('IntersectionObserver' in window&&shot){var cur='';var io=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;steps.forEach(function(s){s.classList.toggle('on',s===en.target)});
-  var src=en.target.getAttribute('data-shot');if(src&&src!==cur){cur=src;shot.classList.add('fade');setTimeout(function(){shot.src=src;shot.onload=function(){shot.classList.remove('fade')}},reduce?0:200)}})},{rootMargin:'-45% 0px -45% 0px'});
+  var src=shotSrc(en.target.getAttribute('data-shot'));if(src&&src!==cur){cur=src;shot.classList.add('fade');setTimeout(function(){shot.src=src;shot.onload=function(){shot.classList.remove('fade')}},reduce?0:200)}})},{rootMargin:'-45% 0px -45% 0px'});
  steps.forEach(function(s){io.observe(s)})}
 
 /* ---------- кольори дня ---------- */
 var palShot=$('#palShot'),PAL=dayPal,MODE='dark';
 function palApply(){$$('.sw').forEach(function(b){b.setAttribute('aria-checked',b.getAttribute('data-pal')===PAL?'true':'false')});
  $$('.daynight button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-mode')===MODE?'true':'false')});
- root.setAttribute('data-accent',PAL);if(!palShot)return;var src='img/pal_'+(MODE==='light'?'light_':'')+PAL+'.webp';palShot.classList.add('fade');var im=new Image();im.onload=function(){palShot.src=src;palShot.classList.remove('fade')};im.src=src}
+ root.setAttribute('data-accent',PAL);shotsRecolor();if(!palShot)return;var src='img/pal_'+(MODE==='light'?'light_':'')+PAL+'.webp';palShot.classList.add('fade');var im=new Image();im.onload=function(){palShot.src=src;palShot.classList.remove('fade')};im.src=src}
 $$('.sw').forEach(function(b){b.addEventListener('click',function(){PAL=b.getAttribute('data-pal');palApply()})});
 $$('.daynight button').forEach(function(b){b.addEventListener('click',function(){MODE=b.getAttribute('data-mode');palApply()})});
 
@@ -144,5 +146,5 @@ if('IntersectionObserver' in window&&!reduce){var ro=new IntersectionObserver(fu
  new IntersectionObserver(function(es){heroVis=es[0].isIntersecting;upd()}).observe(h);if(f)new IntersectionObserver(function(es){finVis=es[0].isIntersecting;upd()}).observe(f)})();
 
 /* старт */
-setLang(startLang);palApply();
+setLang(startLang);palApply();shotsRecolor();
 })();
