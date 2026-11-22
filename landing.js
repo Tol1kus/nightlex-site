@@ -23,16 +23,34 @@ a1:'Open <u>app.nightlex.com</u> in Chrome and tap the menu <span class="kbd">�
 tl1:'Instructions for testers →',tl1p:'A 7-day plan, a short survey, how to send a screenshot',tl2:'Native speaker of Danish or English? →',tl2p:'Help us check sentences — 10 minutes, answers are saved automatically',
 e_faq:'FAQ',h_faq:'What people usually ask',q1:'Is it free?',a1x:'Yes — during testing everything is free and ad-free.',q2:'Do I need to sign up?',a2x:'No. Open it and learn — your progress is stored on your device.',q3:'I’m a complete beginner. Is it for me?',a3x:'Yes. Choose “I’m a complete beginner” and start from the very first word. If you already know some, the level test counts the words you know.',q4:'Which languages can I learn?',a4x:'Danish and US English with a Ukrainian interface. Danish can also be learned with an English interface.',q5:'Why is the content made with AI?',a5x:'That’s how we could prepare thousands of words, sentences and texts for every level. Everything was proofread by a model, and native speakers are now checking it line by line — we fix every mistake.',q6:'How much time does it take a day?',a6x:'About 30 minutes on Relaxed and Fast, about an hour on Intensive. You can change the pace any time.',
 h_final:'Your first word —<br><span class="grad">tonight.</span>',sub_final:'Start with the level test or with your very first word.',ft1:'For testers',ft2:'Native speaker check',ft3:'Sources and licences'};
+var DA={st1:'ord og udtryk',st2:'tekster at læse',st3:'grammatiklektioner',st4:'seks niveauer',e_nat:'For modersmålstalere',h_nat:'Har du dansk eller engelsk som modersmål?',p_nat:'Hjælp os med at tjekke spillets ord og sætninger — 10 minutter, uden login. Dine svar gemmes automatisk.',
+n1:'Prøv det',n2:'Sådan virker det',n3:'Testere',n4:'Spørgsmål',open:'Åbn',kick:'Betaversion · A1 → C2',
+h1:'Dansk og engelsk.<br><span class="grad">Lidt hver dag.</span>',lead:'Et sprogspil for ukrainere: nye ord, sætninger, tekster og dialoger. Hvert ord kommer tilbage, lige når du begynder at glemme det.',
+start:'Begynd at lære',tryit:'Prøv det her ↓',pl1:'Ingen reklamer',pl2:'Ingen sporing',pl3:'Uden login',pl4:'iPhone · Android · PC',ch1:'→ cat',ch2:'Rigtigt!',ch3:'nye ord i dag',
+e_try:'Prøv det lige her',h_try:'Ét minut — og du er i gang med dansk',q_tag:'Nyt ord · A1',q_ask:'Hvad betyder det?',r_tag:'Læsning · tryk på et ord',r_hint:'Tryk på et ord for at se oversættelsen.',r_note:'Sådan læses alle tekster i spillet: hverdagshistorier og tekster om landet, fra A1 til C2.',
+e_how:'Sådan virker det',h_how:'Din plan for hver dag',s1:'Vælg niveau og tempo',s1p:'En kort test viser, hvor du skal starte. Tempoet er dit: 10, 15 eller 20 nye ord om dagen.',s2:'Åbn dagens plan',s2p:'Repetition, nye ord, øvelser, en tekst eller en dialog. Trin for trin — du skal ikke selv finde ud af, hvad der kommer nu.',s3:'Lær nye ord',s3p:'Et billede, en eksempelsætning og en naturlig stemme. Swipe til højre — det kan jeg; til venstre — ikke endnu.',s4:'Lav en fejl — og forstå den',s4p:'En kort regel og et eksempel med det samme. Ordet kommer tilbage, præcis når det er tid til at repetere det.',
+e_col:'En ny farve hver dag',h_col:'Spillet skifter stemning sammen med dig',sub_col:'Hver dag har sin egen farve: lavendel, salvie, sand eller rosa. Behold din favorit, eller skift til lyst tema om dagen. Prøv selv:',pal1:'Lavendel',pal2:'Salvie',pal3:'Sand',pal4:'Rosa',m_dark:'Nat',m_light:'Dag',
+e_feat:'Hvad er der i spillet',h_feat:'Alt det, du skal bruge for at tale',f1:'Naturlige stemmer',f1p:'Danske ord, sætninger og tekster er indtalt med naturlige stemmer. Du kan sætte farten ned.',f2:'Smart repetition',f2p:'FSRS-algoritmen regner ud, hvornår hvert ord skal komme tilbage, så det bliver husket længe.',f2c:'repetition — og hukommelsen er fuld igen',f3:'Rigtige tekster',f3p:'Hverdagshistorier og tekster om landet, efter niveau — med oversættelse lige under fingeren.',f4:'Dialoger fra hverdagen',f4p:'Butikken, lægen, kommunen, arbejdet. Du svarer selv og lærer, hvorfor man siger det sådan.',f5:'Fejl forklaret',f5p:'En kort regel lige efter en fejl. Ord, du fejler i, havner i „Mine fejl“.',f6:'Fra A1 til C2',f6p:'Tusindvis af ord i hverdagsemner, grammatik og tekster til hvert niveau.',
+e_pace:'Du vælger selv tempoet',h_pace:'Hvor mange ord om dagen?',p1:'Roligt',p2:'Hurtigt',p3:'Intensivt',pace_note:'Du kan altid ændre det i spillets indstillinger.',po1:'nye ord om dagen',po2:'minutter om dagen',po3:'måneder til niveau A1',
+e_hon:'Ærligt talt',h_hon:'Vi tester stadig — og det siger vi ligeud',h1c:'Ingen reklamer og ingen sporing',h1cp:'Dine fremskridt gemmes på din enhed. Ingen reklamesporing og ingen statistik.',h2c:'Tjekket af modersmålstalere',h2cp:'Oversættelser, sætninger og tekster er lavet med AI og gennemlæst af en model. Lige nu tjekker modersmålstalere dem.',h3c:'Har du set en fejl?',h3cp:'I spillet: „Me“ → „Report a problem“. Du kan vedhæfte et skærmbillede — vi læser alt.',
+e_tst:'For testere',h_tst:'Læg NightLex på telefonens hjemmeskærm',sub_tst:'Så åbner spillet som en almindelig app — i fuld skærm og med sit eget ikon. Det tager 20 sekunder.',
+i1:'Åbn <u>app.nightlex.com</u> i Safari, og tryk på Del <span class="kbd">⬆︎</span> nederst.',ms1:'Kopiér',ms2:'Tilføj bogmærke',ms3:'Føj til hjemmeskærm',ms4:'Udskriv',i2:'Rul ned, vælg „Føj til hjemmeskærm“ og derefter „Tilføj“.',i3:'Færdig! NightLex-ikonet ligger på skærmen — åbn det derfra hver dag.',
+a1:'Åbn <u>app.nightlex.com</u> i Chrome, og tryk på menuen <span class="kbd">⋮</span> øverst til højre.',am1:'Ny fane',am2:'Historik',am3:'Føj til startskærm',am4:'Indstillinger',a2:'Vælg „Føj til startskærm“ (eller „Installer app“) og derefter „Tilføj“.',a3:'Færdig! Åbn NightLex fra startskærmen.',inst_note:'Navnene i menuen kan variere lidt fra telefon til telefon.',
+tl1:'Vejledning til testere →',tl1p:'En plan for 7 dage, et kort spørgeskema, sådan sender du et skærmbillede',tl2:'Har du dansk eller engelsk som modersmål? →',tl2p:'Hjælp os med at tjekke sætninger — 10 minutter, svarene gemmes automatisk',
+e_faq:'Spørgsmål',h_faq:'Det, folk tit spørger om',q1:'Er det gratis?',a1x:'Ja — mens vi tester, er alt gratis og uden reklamer.',q2:'Skal jeg oprette en konto?',a2x:'Nej. Åbn spillet og lær — dine fremskridt gemmes på din enhed.',q3:'Jeg er helt nybegynder. Passer det til mig?',a3x:'Ja. Vælg „helt nybegynder“, og start fra det allerførste ord. Kan du allerede noget, tæller niveautesten de ord, du kender.',q4:'Hvilke sprog kan jeg lære?',a4x:'Dansk og amerikansk engelsk med ukrainsk brugerflade. Dansk kan også læres med engelsk brugerflade.',q5:'Hvorfor er indholdet lavet med AI?',a5x:'Sådan kunne vi lave tusindvis af ord, sætninger og tekster til alle niveauer. Alt er gennemlæst af en model, og nu tjekker modersmålstalere det linje for linje — vi retter hver fejl.',q6:'Hvor lang tid tager det om dagen?',a6x:'Cirka 30 minutter i tempoerne „Roligt“ og „Hurtigt“, omkring en time i „Intensivt“. Du kan altid skifte tempo.',
+h_final:'Dit første ord —<br><span class="grad">i aften.</span>',sub_final:'Start med niveautesten eller med dit allerførste ord.',ft1:'For testere',ft2:'Tjek af modersmålstalere',ft3:'Kilder og licenser'};
 var UK={};$$('[data-t]').forEach(function(e){var k=e.getAttribute('data-t');if(!(k in UK))UK[k]=e.hasAttribute('data-html')?e.innerHTML:e.textContent});
-var TITLE={uk:doc.title,en:'NightLex — learn Danish and English, a little every day'};
-var LANG='uk';
-function setLang(l){LANG=l;var d=l==='en'?EN:UK;root.lang=l==='en'?'en':'uk';
+var TITLE={uk:doc.title,en:'NightLex — learn Danish and English, a little every day',da:'NightLex — lær dansk og engelsk, lidt hver dag'};
+var LANG='uk';function L3(u,e,d){return LANG==='en'?e:LANG==='da'?d:u}
+function setLang(l){LANG=l;var d=l==='en'?EN:l==='da'?DA:UK;root.lang=l;
  $$('[data-t]').forEach(function(e){var v=d[e.getAttribute('data-t')];if(v==null)return;if(e.hasAttribute('data-html'))e.innerHTML=v;else e.textContent=v});
- doc.title=TITLE[l];$$('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-set')===l?'true':'false')});
+ doc.title=TITLE[l]||TITLE.uk;$$('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-set')===l?'true':'false')});
  buildTicker();quizRender();readerBuild();paceSet(PACE,true)}
 var saved=null;try{saved=localStorage.getItem('nx-landing-lang')}catch(e){}
-var q=/[?&]lang=(en|uk)/.exec(location.search);
-var startLang=q?q[1]:saved||(/^(uk|ru)/i.test(navigator.language||'uk')?'uk':'en');
+var q=/[?&]lang=(en|uk|da)/.exec(location.search);
+// мова браузера: українська (і російська) → UA, данська (і норвезька) → DA, решта → EN; вибір кнопкою запам'ятовується
+function browserLang(){var ls=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'uk']);for(var i=0;i<ls.length;i++){var c=String(ls[i]).toLowerCase().slice(0,2);if(c==='uk'||c==='ru')return 'uk';if(c==='da'||c==='nb'||c==='no'||c==='nn')return 'da';if(c==='en')return 'en'}return 'en'}
+var startLang=q?q[1]:saved||browserLang();
 $$('.lang button').forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-set');setLang(v);try{localStorage.setItem('nx-landing-lang',v)}catch(e){}})});
 
 /* ---------- колір дня (як у грі: 4 кольори по черзі) ---------- */
@@ -56,22 +74,22 @@ if(!reduce){var stage=$('#stage'),tick=false;addEventListener('scroll',function(
 /* ---------- бігучий рядок ---------- */
 var TICK=[['hej','привіт','hi'],['tak','дякую','thank you'],['en kop kaffe','чашка кави','a cup of coffee'],['hygge','затишок','coziness'],['i dag','сьогодні','today'],['en ven','друг','a friend'],['at læse','читати','to read'],['godmorgen','доброго ранку','good morning'],
  ['friend','друг','—'],['to learn','вчити','—'],['tomorrow','завтра','—'],['beautiful','гарний','—'],['velkommen','ласкаво просимо','welcome'],['en cykel','велосипед','a bicycle'],['undskyld','вибачте','sorry'],['to travel','подорожувати','—']];
-function buildTicker(){var t=$('#ticker');if(!t)return;var one=TICK.filter(function(w){return LANG==='uk'||w[2]!=='—'}).map(function(w){return '<span>'+esc(w[0])+'<em>'+esc(LANG==='en'?w[2]:w[1])+'</em></span>'}).join('');t.innerHTML=one+one}
+function buildTicker(){var t=$('#ticker');if(!t)return;var one=TICK.filter(function(w){return LANG==='uk'||w[2]!=='—'}).map(function(w){return '<span>'+esc(w[0])+'<em>'+esc(LANG!=='uk'?w[2]:w[1])+'</em></span>'}).join('');t.innerHTML=one+one}
 
 /* ---------- вікторина ---------- */
-var QZ=[{w:'en kat',pic:'img/cat.webp',uk:['кіт','собака','книжка'],en:['cat','dog','book'],why:{uk:'<b>en kat</b> — кіт. «en» — артикль: рід en, як у більшості данських іменників.',en:'<b>en kat</b> means cat. “en” is the article: most Danish nouns are “en” words.'}},
- {w:'en cykel',pic:'img/bicycle.webp',uk:['автобус','велосипед','потяг'],en:['bus','bicycle','train'],why:{uk:'<b>en cykel</b> — велосипед. У Данії на велосипеді їздять щодня — навіть узимку.',en:'<b>en cykel</b> means bicycle. In Denmark people cycle every day — even in winter.'}},
- {w:'et æble',pic:'img/apple.webp',uk:['груша','хліб','яблуко'],en:['pear','bread','apple'],why:{uk:'<b>et æble</b> — яблуко. «et» — другий рід. Літера æ звучить приблизно як «е».',en:'<b>et æble</b> means apple. “et” is the second gender. The letter æ sounds roughly like “e” in “bed”.'}}];
+var QZ=[{w:'en kat',pic:'img/cat.webp',uk:['кіт','собака','книжка'],en:['cat','dog','book'],why:{uk:'<b>en kat</b> — кіт. «en» — артикль: рід en, як у більшості данських іменників.',en:'<b>en kat</b> means cat. “en” is the article: most Danish nouns are “en” words.',da:'<b>en kat</b> betyder „cat“. „en“ er artiklen — de fleste danske navneord er en-ord.'}},
+ {w:'en cykel',pic:'img/bicycle.webp',uk:['автобус','велосипед','потяг'],en:['bus','bicycle','train'],why:{uk:'<b>en cykel</b> — велосипед. У Данії на велосипеді їздять щодня — навіть узимку.',en:'<b>en cykel</b> means bicycle. In Denmark people cycle every day — even in winter.',da:'<b>en cykel</b> betyder „bicycle“. I Danmark cykler mange hver dag — også om vinteren.'}},
+ {w:'et æble',pic:'img/apple.webp',uk:['груша','хліб','яблуко'],en:['pear','bread','apple'],why:{uk:'<b>et æble</b> — яблуко. «et» — другий рід. Літера æ звучить приблизно як «е».',en:'<b>et æble</b> means apple. “et” is the second gender. The letter æ sounds roughly like “e” in “bed”.',da:'<b>et æble</b> betyder „apple“. „et“ er det andet køn i dansk.'}}];
 var QA=[0,1,2],qi=0,score=0,answered=false;
 function qCorrect(i){return QZ[i].uk.indexOf({0:'кіт',1:'велосипед',2:'яблуко'}[i])}
 function quizRender(){var box=$('#qOpts');if(!box)return;var fb=$('#qFb');
  if(qi>=QZ.length){$('#quiz').querySelector('.q-pic').style.display='none';$('#qWord').innerHTML='';$('.q-ask').style.display='none';
-  box.innerHTML='<div class="q-done"><b>'+score+' / 3</b>'+(LANG==='en'?'That’s how a lesson starts in NightLex.':'Так починається урок у NightLex.')+'</div>';
-  fb.innerHTML='<a class="next" href="https://app.nightlex.com/">'+(LANG==='en'?'Continue in the game →':'Продовжити в грі →')+'</a>';$('#qN').textContent='3 / 3';return}
- var it=QZ[qi],opts=it[LANG==='en'?'en':'uk'];$('#qN').textContent=(qi+1)+' / 3';$('#qWord').textContent=it.w;var p=$('#qPic');p.src=it.pic;
+  box.innerHTML='<div class="q-done"><b>'+score+' / 3</b>'+L3('Так починається урок у NightLex.','That’s how a lesson starts in NightLex.','Sådan starter en lektion i NightLex.')+'</div>';
+  fb.innerHTML='<a class="next" href="https://app.nightlex.com/">'+L3('Продовжити в грі →','Continue in the game →','Fortsæt i spillet →')+'</a>';$('#qN').textContent='3 / 3';return}
+ var it=QZ[qi],opts=it[LANG!=='uk'?'en':'uk'];$('#qN').textContent=(qi+1)+' / 3';$('#qWord').textContent=it.w;var p=$('#qPic');p.src=it.pic;
  box.innerHTML=opts.map(function(o,i){return '<button type="button" data-i="'+i+'">'+esc(o)+'</button>'}).join('');fb.innerHTML='';answered=false}
 function quizAnswer(i){if(answered)return;answered=true;var ok=qCorrect(qi),bs=$$('#qOpts button');bs[ok].classList.add('ok');if(i!==ok)bs[i].classList.add('bad');else{score++;var pic=$('.q-pic');pic.classList.remove('pop');void pic.offsetWidth;pic.classList.add('pop')}
- var it=QZ[qi];$('#qFb').innerHTML=(i===ok?'<span style="color:var(--ok);font-weight:700">'+(LANG==='en'?'Correct! ':'Правильно! ')+'</span>':'')+it.why[LANG==='en'?'en':'uk']+'<button type="button" class="next">'+(LANG==='en'?'Next':'Далі')+'</button>'}
+ var it=QZ[qi];$('#qFb').innerHTML=(i===ok?'<span style="color:var(--ok);font-weight:700">'+L3('Правильно! ','Correct! ','Rigtigt! ')+'</span>':'')+(it.why[LANG]||it.why.en)+'<button type="button" class="next">'+L3('Далі','Next','Næste')+'</button>'}
 doc.addEventListener('click',function(e){var b=e.target.closest('#qOpts button');if(b){quizAnswer(+b.getAttribute('data-i'));return}
  var n=e.target.closest('#qFb button.next');if(n){qi++;quizRender()}});
 
@@ -79,9 +97,9 @@ doc.addEventListener('click',function(e){var b=e.target.closest('#qOpts button')
 var RD=[['Hej!','привіт','hi'],['Jeg','я','I'],['hedder','звуся (мене звати)','am called'],['Anna.','Анна (ім’я)','Anna (a name)'],['Jeg','я','I'],['bor','живу','live'],['i','в','in'],['København.','Копенгаген','Copenhagen'],
  ['Om morgenen','вранці','in the morning'],['cykler','їжджу на велосипеді','cycle'],['jeg','я','I'],['på arbejde.','на роботу','to work'],['Om aftenen','увечері','in the evening'],['læser','читаю','read'],['jeg','я','I'],['en bog.','книжку','a book']];
 function readerBuild(){var t=$('#rdText');if(!t)return;t.innerHTML=RD.map(function(w,i){return '<button type="button" data-i="'+i+'">'+esc(w[0])+'</button>'}).join(' ');
- var tip=$('#rdTip');tip.innerHTML='<span>'+esc(LANG==='en'?EN.r_hint:UK.r_hint)+'</span>'}
+ var tip=$('#rdTip');tip.innerHTML='<span>'+esc((LANG==='en'?EN:LANG==='da'?DA:UK).r_hint)+'</span>'}
 doc.addEventListener('click',function(e){var b=e.target.closest('#rdText button');if(!b)return;$$('#rdText button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
- var w=RD[+b.getAttribute('data-i')],tip=$('#rdTip');tip.innerHTML='<b lang="da">'+esc(w[0].replace(/[.!]$/,''))+'</b>'+esc(LANG==='en'?w[2]:w[1]);tip.classList.remove('flash');void tip.offsetWidth;tip.classList.add('flash')});
+ var w=RD[+b.getAttribute('data-i')],tip=$('#rdTip');tip.innerHTML='<b lang="da">'+esc(w[0].replace(/[.!]$/,''))+'</b>'+esc(LANG!=='uk'?w[2]:w[1]);tip.classList.remove('flash');void tip.offsetWidth;tip.classList.add('flash')});
 
 /* ---------- «як це працює»: телефон показує екран поточного кроку ---------- */
 var shot=$('#storyShot'),steps=$$('.step');
@@ -100,8 +118,8 @@ $$('.daynight button').forEach(function(b){b.addEventListener('click',function()
 /* ---------- темп ---------- */
 var PACE=15,PM={10:['≈ 30','≈ 4,5','≈ 4.5'],15:['≈ 30','≈ 3','≈ 3'],20:['≈ 60','≈ 2','≈ 2']};
 function paceSet(n,quiet){PACE=n;$$('.seg button').forEach(function(b){b.setAttribute('aria-checked',+b.getAttribute('data-n')===n?'true':'false')});
- var m=PM[n];[['#pN',String(n)],['#pT',m[0]],['#pM',LANG==='en'?m[2]:m[1]]].forEach(function(x){var el=$(x[0]);if(!el)return;if(el.textContent!==x[1]){el.textContent=x[1];if(!quiet){el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump')}}});
- var mo=$('[data-t="po3"]');if(mo)mo.textContent=LANG==='en'?EN.po3:(n===10?'місяця на рівень A1':n===15?'місяці на рівень A1':'місяці на рівень A1')}
+ var m=PM[n];[['#pN',String(n)],['#pT',m[0]],['#pM',LANG!=='uk'?m[2]:m[1]]].forEach(function(x){var el=$(x[0]);if(!el)return;if(el.textContent!==x[1]){el.textContent=x[1];if(!quiet){el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump')}}});
+ var mo=$('[data-t="po3"]');if(mo)mo.textContent=LANG==='en'?EN.po3:LANG==='da'?DA.po3:(n===10?'місяця на рівень A1':n===15?'місяці на рівень A1':'місяці на рівень A1')}
 $$('.seg button').forEach(function(b){b.addEventListener('click',function(){paceSet(+b.getAttribute('data-n'))})});
 
 /* ---------- вкладки iPhone / Android (за пристроєм) ---------- */
@@ -115,7 +133,7 @@ if('IntersectionObserver' in window&&!reduce){var ro=new IntersectionObserver(fu
 
 /* ---------- цифри: «набігають» при появі ---------- */
 (function(){var els=$$('.stat b[data-count]');if(!els.length)return;
- function fmt(n){var t=String(n);if(n>=1000)t=t.slice(0,-3)+(LANG==='en'?',':' ')+t.slice(-3);return t}
+ function fmt(n){var t=String(n);if(n>=1000)t=t.slice(0,-3)+(LANG==='en'?',':LANG==='da'?'.':' ')+t.slice(-3);return t}
  function run(el){var to=+el.getAttribute('data-count'),suf=el.getAttribute('data-suf')||'',t0=null;if(reduce){el.textContent=fmt(to)+suf;return}
   function st(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1400),e=1-Math.pow(1-k,3);el.textContent=fmt(Math.round(to*e))+suf;if(k<1)requestAnimationFrame(st)}requestAnimationFrame(st)}
  if('IntersectionObserver' in window){var o=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){run(en.target);o.unobserve(en.target)}})},{threshold:.6});els.forEach(function(e){o.observe(e)})}else els.forEach(run)})();
