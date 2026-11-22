@@ -8,7 +8,7 @@ function $(s,c){return (c||doc).querySelector(s)}function $$(s,c){return Array.p
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 
 /* ---------- мова ---------- */
-var EN={n1:'Try it',n2:'How it works',n3:'Testers',n4:'FAQ',open:'Open',kick:'Beta · A1 → C2',
+var EN={e_nat:'For native speakers',h_nat:'Are you a native speaker of Danish or English?',p_nat:'Help us check the game’s words and sentences — 10 minutes, no sign-up. Your answers are saved automatically.',n1:'Try it',n2:'How it works',n3:'Testers',n4:'FAQ',open:'Open',kick:'Beta · A1 → C2',
 h1:'Danish and English.<br><span class="grad">A little every day.</span>',lead:'A language game: new words, sentences, texts and dialogues. Every word comes back right when you start to forget it.',
 start:'Start learning',tryit:'Try it here ↓',pl1:'No ads',pl2:'No tracking',pl3:'No sign-up',pl4:'iPhone · Android · PC',ch1:'→ cat',ch2:'Correct!',ch3:'new words today',
 e_try:'Try it right here',h_try:'One minute, and you’re learning Danish',q_tag:'New word · A1',q_ask:'What does it mean?',r_tag:'Reading · tap a word',r_hint:'Tap any word to see its translation.',r_note:'Every text in the game reads like this: everyday stories and texts about the country, from A1 to C2.',
