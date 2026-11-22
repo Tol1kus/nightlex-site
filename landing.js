@@ -124,7 +124,8 @@ $$('.daynight button').forEach(function(b){b.addEventListener('click',function()
 /* ---------- темп ---------- */
 var PACE=15,PM={10:['20','≈ 4,5','≈ 4.5'],15:['30','≈ 3','≈ 3'],20:['60','≈ 2','≈ 2']};
 function paceSet(n,quiet){PACE=n;$$('.seg button').forEach(function(b){b.setAttribute('aria-checked',+b.getAttribute('data-n')===n?'true':'false')});
- var m=PM[n];[['#pN',String(n)],['#pT',L3('до ','up to ','op til ')+m[0]],['#pM',LANG==='en'?m[2]:m[1]]].forEach(function(x){var el=$(x[0]);if(!el)return;if(el.textContent!==x[1]){el.textContent=x[1];if(!quiet){el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump')}}});
+ var m=PM[n];var pt=$('#pT');if(pt){var pre=L3('до','up to','op til'),h='<i>'+pre+'</i>'+m[0];if(pt.innerHTML!==h){pt.innerHTML=h;if(!quiet){pt.classList.remove('bump');void pt.offsetWidth;pt.classList.add('bump')}}}
+ [['#pN',String(n)],['#pM',LANG==='en'?m[2]:m[1]]].forEach(function(x){var el=$(x[0]);if(!el)return;if(el.textContent!==x[1]){el.textContent=x[1];if(!quiet){el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump')}}});
  var mo=$('[data-t="po3"]');if(mo)mo.textContent=LANG==='en'?EN.po3:LANG==='da'?DA.po3:(n===10?'місяця на рівень A1':n===15?'місяці на рівень A1':'місяці на рівень A1')}
 $$('.seg button').forEach(function(b){b.addEventListener('click',function(){paceSet(+b.getAttribute('data-n'))})});
 
