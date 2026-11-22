@@ -366,3 +366,10 @@ footer{border-top:1px solid var(--line);padding:30px 0 calc(30px + env(safe-area
 @media (max-width:760px){.m-cta{display:inline-flex;position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:30;height:56px;font-size:16px;transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}.m-cta.show{transform:none}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}}
 
 .m-shot{border:0!important;box-shadow:0 0 0 6px #26232b,0 0 0 7px rgba(255,255,255,.08),0 30px 60px -24px rgba(0,0,0,.8),0 0 70px -10px color-mix(in srgb,var(--a) 45%,transparent)!important;object-fit:contain!important}
+
+/* один колір — колір дня — для всіх значків і акцентів (22.11.2026, автор: «або залиш все одному кольорі») */
+.t-fsrs .ic,.t-mist .ic,.t-read .ic,.t-lv .ic{background:color-mix(in srgb,var(--a) 15%,transparent);color:var(--a)}
+.curve .cv{stroke:var(--a)}.curve circle{fill:var(--a)}
+.wave i{background:var(--a)}
+.stat b{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--a)}
+.kick i{background:var(--a);box-shadow:0 0 0 0 color-mix(in srgb,var(--a) 60%,transparent)}
