@@ -373,3 +373,46 @@ footer{border-top:1px solid var(--line);padding:30px 0 calc(30px + env(safe-area
 .wave i{background:var(--a)}
 .stat b{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--a)}
 .kick i{background:var(--a);box-shadow:0 0 0 0 color-mix(in srgb,var(--a) 60%,transparent)}
+
+/* ===== 22.11.2026 «до 10»: смужка для носіїв, перший екран, доступність, коротше ===== */
+.nstrip{position:relative;z-index:21;background:linear-gradient(90deg,color-mix(in srgb,var(--a) 22%,#17151b),#1b1920);border-bottom:1px solid color-mix(in srgb,var(--a) 35%,transparent);font-size:14px;padding-top:env(safe-area-inset-top)}
+.ns-in{display:flex;align-items:center;justify-content:center;gap:10px 16px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+.ns-t{color:var(--tx);font-weight:600}
+.ns-bs{display:flex;gap:8px;flex-wrap:wrap}
+.ns-b{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:4px 12px 4px 5px;border-radius:999px;background:var(--tx);color:var(--bg);font-weight:700;font-size:13.5px;text-decoration:none}
+.ns-b b{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;background:#C8102E;color:#fff;font:800 10.5px/1 var(--disp)}
+.ns-b.en b{background:#3C3B6E}
+.nav{padding-top:0}
+.nav.solid{background:rgba(18,17,21,.94)}
+/* перший екран: кнопка й значки видно одразу */
+.hero{min-height:0;padding-top:28px}
+.lang button{min-height:36px;min-width:40px;display:inline-flex;align-items:center;justify-content:center;padding:0 10px}
+:root{--mut2:#9a93a0}
+.rd-note,.curve small,.note-c{color:var(--mut2)}
+.step{opacity:.55}
+@media (min-width:981px){.step{min-height:48vh}.hero{min-height:calc(88svh - 110px)}}
+/* «Як це працює» на телефоні: замість 4 великих телефонів — один ряд знімків */
+.m-strip{display:none}
+@media (max-width:980px){
+ .m-strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 20px 20px;margin:0 -20px;scrollbar-width:none}
+ .m-strip::-webkit-scrollbar{display:none}
+ .m-strip img{flex:0 0 auto;width:158px;height:auto;aspect-ratio:390/844;border-radius:22px;scroll-snap-align:center;box-shadow:0 0 0 5px #26232b,0 0 0 6px rgba(255,255,255,.08),0 20px 40px -20px rgba(0,0,0,.8)}
+ .step{padding:0 0 26px}
+ .inst{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(76%,300px);overflow-x:auto;scroll-snap-type:x mandatory;max-width:none;padding-bottom:10px;scrollbar-width:none}
+ .inst::-webkit-scrollbar{display:none}
+ .inst figure{scroll-snap-align:start}
+}
+@media (max-width:560px){
+ .btn.sm{display:inline-flex;height:36px;padding:0 14px;font-size:12px}
+ .nav-r{gap:6px}.lang button{min-width:34px;padding:0 7px}
+ .stage{margin-top:26px}
+ .ns-t{font-size:13px;text-align:center}
+}
+/* «Хто робить NightLex» */
+.about{padding:44px 50px;border-radius:30px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015))}
+.about .sub{max-width:46em}
+.ab-link{display:inline-block;margin-top:22px;color:var(--a);font-weight:700;text-decoration:none}
+.ab-link:hover{text-decoration:underline}
+@media (max-width:980px){.about{padding:28px 22px}}
+@media (max-width:560px){.logo{font-size:18px}.logo svg{width:11px;height:11px;margin-top:-12px}.nav-in{gap:8px}.lang{padding:2px}.lang button{min-width:30px;min-height:34px;padding:0 6px;font-size:11.5px}.btn.sm{padding:0 11px;height:34px}}
+@media (max-width:380px){.btn.sm{display:none}}

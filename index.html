@@ -10,13 +10,34 @@
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="preload" href="fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="canonical" href="https://nightlex.com/">
+<link rel="alternate" hreflang="uk" href="https://nightlex.com/">
+<link rel="alternate" hreflang="en" href="https://nightlex.com/?lang=en">
+<link rel="alternate" hreflang="da" href="https://nightlex.com/?lang=da">
+<link rel="alternate" hreflang="x-default" href="https://nightlex.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nightlex.com/">
+<meta property="og:site_name" content="NightLex">
+<meta property="og:locale" content="uk_UA">
 <meta property="og:title" content="NightLex — данська й англійська для українців">
 <meta property="og:description" content="Щодня потроху: слова, речення, тексти й діалоги. Від A1 до C2, у своєму темпі.">
-<meta property="og:image" content="https://nightlex.com/img/card_pic.jpg">
+<meta property="og:image" content="https://nightlex.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NightLex — гра для вивчення данської та англійської">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "NightLex", "url": "https://app.nightlex.com/", "applicationCategory": "EducationalApplication", "operatingSystem": "iOS, Android, Windows, macOS (браузер)", "inLanguage": ["uk", "en", "da"], "description": "Гра для вивчення данської та американської англійської від A1 до C2: нові слова, речення, тексти й діалоги, розумне повторення.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Це безкоштовно?", "acceptedAnswer": {"@type": "Answer", "text": "Так, під час тестування все безкоштовно і без реклами."}}, {"@type": "Question", "name": "Потрібна реєстрація?", "acceptedAnswer": {"@type": "Answer", "text": "Ні. Відкриваєш і вчишся — прогрес зберігається на твоєму пристрої."}}, {"@type": "Question", "name": "Я зовсім новачок. Мені підійде?", "acceptedAnswer": {"@type": "Answer", "text": "Так. Обери «Я зовсім новачок» — і почнеш з першого слова. Якщо вже щось знаєш, тест рівня зарахує знайомі слова."}}, {"@type": "Question", "name": "Які мови можна вчити?", "acceptedAnswer": {"@type": "Answer", "text": "Данську та американську англійську — з українським інтерфейсом. Данську також можна вчити з англійським інтерфейсом."}}, {"@type": "Question", "name": "Чому тексти зроблено за допомогою ШІ?", "acceptedAnswer": {"@type": "Answer", "text": "Так ми змогли підготувати тисячі слів, речень і текстів для всіх рівнів. Усе перевірено ще раз ШІ, а зараз носії мови перевіряють рядок за рядком — помилки виправляємо."}}, {"@type": "Question", "name": "Скільки часу треба на день?", "acceptedAnswer": {"@type": "Answer", "text": "Приблизно 20 хвилин у темпі «Спокійно», 30 — у «Швидко» і близько години — в «Інтенсивно». Темп можна змінити будь-коли."}}]}]</script>
 <link rel="stylesheet" href="landing.css">
 </head>
 <body>
 <div class="sky" aria-hidden="true"><svg id="stars" width="100%" height="100%"></svg><div class="aurora"></div></div>
+
+<div class="nstrip" role="region" aria-label="Для носіїв мови">
+ <div class="wrap ns-in">
+  <span class="ns-t" data-t="ns_t">Носій данської чи англійської? Допоможи перевірити слова гри — 10 хв.</span>
+  <span class="ns-bs"><a class="ns-b" href="https://app.nightlex.com/check.html?lang=da" lang="da"><b>DA</b>Tjek dansken →</a><a class="ns-b en" href="https://app.nightlex.com/check.html?lang=en" lang="en"><b>EN</b>Check the English →</a></span>
+ </div>
+</div>
 
 <header class="nav" id="nav">
  <div class="wrap nav-in">
@@ -30,31 +51,16 @@
 </header>
 
 <main>
- <!-- НОСІЯМ МОВИ (22.11.2026, автор: «додай для носіїв блок зверху, щоб посилання одразу вело на перевірку слів») -->
- <section class="wrap natives-w">
-  <div class="natives reveal">
-   <div class="nt-txt">
-    <span class="eyebrow" data-t="e_nat">Для носіїв мови</span>
-    <h2 class="nt-h" data-t="h_nat">Ти носій данської чи англійської?</h2>
-    <p data-t="p_nat">Допоможи перевірити слова й речення гри — 10 хвилин, без реєстрації. Відповіді зберігаються самі.</p>
-   </div>
-   <div class="nt-btns">
-    <a class="nt-btn" href="https://app.nightlex.com/check.html?lang=da" lang="da"><b class="nt-code">DA</b><span><b>Tjek dansken</b><small>Hjælp os — 10 minutter</small></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <a class="nt-btn en" href="https://app.nightlex.com/check.html?lang=en" lang="en"><b class="nt-code">EN</b><span><b>Check the English</b><small>Help us — 10 minutes</small></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-   </div>
-  </div>
- </section>
-
  <section class="hero wrap">
   <div class="hero-txt">
-   <span class="kick reveal"><i></i><span data-t="kick">Тестова версія · A1 → C2</span></span>
-   <h1 class="reveal" data-t="h1" data-html>Данська й англійська.<br><span class="grad">Щодня потроху.</span></h1>
-   <p class="lead reveal" data-t="lead">Гра для українців: нові слова, речення, тексти й діалоги. Кожне слово повертається саме тоді, коли починаєш його забувати.</p>
-   <div class="ctas reveal">
+   <span class="kick"><i></i><span data-t="kick">Тестова версія · A1 → C2</span></span>
+   <h1 data-t="h1" data-html>Данська й англійська.<br><span class="grad">Щодня потроху.</span></h1>
+   <p class="lead" data-t="lead">Гра для українців: нові слова, речення, тексти й діалоги. Кожне слово повертається саме тоді, коли починаєш його забувати.</p>
+   <div class="ctas">
     <a class="btn main big" href="https://app.nightlex.com/"><span data-t="start">Почати вчити</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <a class="btn ghost big" href="#try" data-t="tryit">Спробувати тут ↓</a>
    </div>
-   <ul class="pills reveal" aria-label="Коротко">
+   <ul class="pills" aria-label="Коротко">
     <li data-t="pl1">Без реклами</li><li data-t="pl2">Без стеження</li><li data-t="pl3">Без реєстрації</li><li data-t="pl4">iPhone · Android · ПК</li>
    </ul>
   </div>
@@ -103,12 +109,13 @@
   <div class="story">
    <div class="story-ph"><div class="ph sticky"><img id="storyShot" src="img/pace_rose.webp" alt="" width="390" height="844"></div></div>
    <ol class="steps">
-    <li class="step" data-shot="pace"><span class="num">01</span><h3 data-t="s1">Обери рівень і темп</h3><p data-t="s1p">Короткий тест покаже, з чого почати. Темп — твій: 10, 15 або 20 нових слів на день.</p><img class="m-shot" src="img/pace_rose.webp" data-ps="pace" alt="" loading="lazy" width="390" height="844"></li>
-    <li class="step" data-shot="home"><span class="num">02</span><h3 data-t="s2">Відкрий план дня</h3><p data-t="s2p">Повтор, нові слова, практика, текст або діалог. Крок за кроком — не треба думати, що робити далі.</p><img class="m-shot" src="img/home_rose.webp" data-ps="home" alt="" loading="lazy" width="390" height="844"></li>
-    <li class="step" data-shot="card_pic"><span class="num">03</span><h3 data-t="s3">Вчи нові слова</h3><p data-t="s3p">Картинка, приклад у реченні й живий голос. Свайп вправо — знаю, вліво — ще ні.</p><img class="m-shot" src="img/card_pic_rose.webp" data-ps="card_pic" alt="" loading="lazy" width="390" height="844"></li>
-    <li class="step" data-shot="exercise"><span class="num">04</span><h3 data-t="s4">Помилився — зрозумів</h3><p data-t="s4p">Одразу коротке правило й приклад. Слово повернеться тоді, коли саме час його повторити.</p><img class="m-shot" src="img/exercise_rose.webp" data-ps="exercise" alt="" loading="lazy" width="390" height="844"></li>
+    <li class="step" data-shot="pace"><span class="num">01</span><h3 data-t="s1">Обери рівень і темп</h3><p data-t="s1p">Короткий тест покаже, з чого почати. Темп — твій: 10, 15 або 20 нових слів на день.</p></li>
+    <li class="step" data-shot="home"><span class="num">02</span><h3 data-t="s2">Відкрий план дня</h3><p data-t="s2p">Повтор, нові слова, практика, текст або діалог. Крок за кроком — не треба думати, що робити далі.</p></li>
+    <li class="step" data-shot="card_pic"><span class="num">03</span><h3 data-t="s3">Вчи нові слова</h3><p data-t="s3p">Картинка, приклад у реченні й живий голос. Свайп вправо — знаю, вліво — ще ні.</p></li>
+    <li class="step" data-shot="exercise"><span class="num">04</span><h3 data-t="s4">Помилився — зрозумів</h3><p data-t="s4p">Одразу коротке правило й приклад. Слово повернеться тоді, коли саме час його повторити.</p></li>
    </ol>
   </div>
+  <div class="m-strip" aria-hidden="true"><img src="img/pace_rose.webp" data-ps="pace" alt="" loading="lazy" width="390" height="844"><img src="img/home_rose.webp" data-ps="home" alt="" loading="lazy" width="390" height="844"><img src="img/card_pic_rose.webp" data-ps="card_pic" alt="" loading="lazy" width="390" height="844"><img src="img/exercise_rose.webp" data-ps="exercise" alt="" loading="lazy" width="390" height="844"></div>
  </section>
 
  <section class="wrap sec" id="colors">
@@ -132,7 +139,7 @@
  <section class="wrap sec">
   <div class="sec-head reveal"><span class="eyebrow" data-t="e_feat">Що всередині</span><h2 data-t="h_feat">Усе, щоб заговорити</h2></div>
   <div class="bento">
-   <div class="tile t-voice reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div><h3 data-t="f1">Живі голоси</h3><p data-t="f1p">Данські слова, речення й тексти озвучені природними голосами. Можна сповільнити.</p><div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+   <div class="tile t-voice reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div><h3 data-t="f1">Природні голоси</h3><p data-t="f1p">Данські слова, речення й тексти озвучені природними голосами ШІ (англійська — скоро). Можна сповільнити.</p><div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
    <div class="tile t-fsrs reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div><h3 data-t="f2">Розумне повторення</h3><p data-t="f2p">Алгоритм FSRS рахує, коли повернути кожне слово, — щоб воно запам’ятовувалось надовго.</p><div class="curve" aria-hidden="true"><svg viewBox="0 0 300 70" preserveAspectRatio="none"><path class="cv" d="M0 6 C25 40 40 50 70 56 L70 10 C100 36 120 44 150 48 L150 8 C185 28 210 34 240 38 L240 6 C265 18 285 22 300 24"/><circle cx="70" cy="10" r="4"/><circle cx="150" cy="8" r="4"/><circle cx="240" cy="6" r="4"/></svg><small data-t="f2c">повтор — і пам’ять знову повна</small></div></div>
    <div class="tile t-read reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h7a2 2 0 0 1 2 2v11a2 2 0 0 0-2-2H4zM20 6h-7v11h7z"/></svg></div><h3 data-t="f3">Справжні тексти</h3><p data-t="f3p">Історії з життя й тексти про країну за рівнями — з перекладом під пальцем.</p></div>
    <div class="tile t-dlg reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z"/></svg></div><h3 data-t="f4">Діалоги з життя</h3><p data-t="f4p">Магазин, лікар, комуна, робота. Відповідаєш сам — і дізнаєшся, чому саме так.</p></div>
@@ -167,7 +174,7 @@
    <h2 data-t="h_hon">Ми ще тестуємо — і кажемо про це прямо</h2>
    <div class="hon-grid">
     <div><h3 data-t="h1c">Без реклами й стеження</h3><p data-t="h1cp">Прогрес зберігається на твоєму пристрої. Жодних рекламних трекерів і аналітики.</p></div>
-    <div><h3 data-t="h2c">Перевірка носіями</h3><p data-t="h2cp">Переклади, речення й тексти підготовлено за допомогою ШІ і вичитано моделлю. Зараз їх перевіряють носії мови.</p></div>
+    <div><h3 data-t="h2c">Перевірка носіями</h3><p data-t="h2cp">Переклади, речення й тексти підготовлено за допомогою ШІ й перевірено ще раз ШІ. Зараз їх перевіряють носії мови.</p></div>
     <div><h3 data-t="h3c">Помітив помилку?</h3><p data-t="h3cp">У грі: «Я» → «Повідомити про проблему». Можна додати знімок екрана — ми все читаємо.</p></div>
    </div>
   </div>
@@ -217,6 +224,15 @@
   </div>
  </section>
 
+ <section class="wrap sec" id="about">
+  <div class="about reveal">
+   <span class="eyebrow" data-t="e_ab">Хто робить NightLex</span>
+   <h2 data-t="h_ab">Незалежний проєкт для тих, хто вчить мову по-справжньому</h2>
+   <p class="sub" data-t="p_ab">NightLex — невеликий незалежний проєкт: без інвесторів, реклами й продажу даних. Ми робимо гру, у якій українцям зручно вчити данську та англійську щодня — з поясненнями рідною мовою, справжніми текстами й темпом, який обираєш сам. Пиши нам прямо з гри: «Я» → «Повідомити про проблему».</p>
+   <a class="ab-link" href="privacy.html" data-t="ab_priv">Як ми поводимося з даними →</a>
+  </div>
+ </section>
+
  <section class="wrap sec" id="faq">
   <div class="sec-head reveal"><span class="eyebrow" data-t="e_faq">Питання</span><h2 data-t="h_faq">Що зазвичай питають</h2></div>
   <div class="faq reveal">
@@ -224,8 +240,8 @@
    <details><summary data-t="q2">Потрібна реєстрація?</summary><p data-t="a2x">Ні. Відкриваєш і вчишся — прогрес зберігається на твоєму пристрої.</p></details>
    <details><summary data-t="q3">Я зовсім новачок. Мені підійде?</summary><p data-t="a3x">Так. Обери «Я зовсім новачок» — і почнеш з першого слова. Якщо вже щось знаєш, тест рівня зарахує знайомі слова.</p></details>
    <details><summary data-t="q4">Які мови можна вчити?</summary><p data-t="a4x">Данську та американську англійську — з українським інтерфейсом. Данську також можна вчити з англійським інтерфейсом.</p></details>
-   <details><summary data-t="q5">Чому тексти зроблено за допомогою ШІ?</summary><p data-t="a5x">Так ми змогли підготувати тисячі слів, речень і текстів для всіх рівнів. Усе вичитано моделлю, а зараз носії мови перевіряють рядок за рядком — помилки виправляємо.</p></details>
-   <details><summary data-t="q6">Скільки часу треба на день?</summary><p data-t="a6x">Приблизно 30 хвилин у темпах «Спокійно» і «Швидко», близько години — в «Інтенсивно». Темп можна змінити будь-коли.</p></details>
+   <details><summary data-t="q5">Чому тексти зроблено за допомогою ШІ?</summary><p data-t="a5x">Так ми змогли підготувати тисячі слів, речень і текстів для всіх рівнів. Усе перевірено ще раз ШІ, а зараз носії мови перевіряють рядок за рядком — помилки виправляємо.</p></details>
+   <details><summary data-t="q6">Скільки часу треба на день?</summary><p data-t="a6x">Приблизно 20 хвилин у темпі «Спокійно», 30 — у «Швидко» і близько години — в «Інтенсивно». Темп можна змінити будь-коли.</p></details>
   </div>
  </section>
 
@@ -241,7 +257,7 @@
 <footer>
  <div class="wrap foot">
   <a class="logo sm" href="./" aria-label="NightLex"><span>Night</span><span class="lx">Lex</span></a>
-  <nav><a href="https://app.nightlex.com/test.html" data-t="ft1">Для тестувальників</a><a href="https://app.nightlex.com/check.html" data-t="ft2">Перевірка носіями</a><a href="credits.html" data-t="ft3">Джерела й ліцензії</a></nav>
+  <nav><a href="https://app.nightlex.com/test.html" data-t="ft1">Для тестувальників</a><a href="https://app.nightlex.com/check.html" data-t="ft2">Перевірка носіями</a><a href="privacy.html" data-t="ft4">Приватність</a><a href="credits.html" data-t="ft3">Джерела й ліцензії</a></nav>
   <span class="copy">© 2026 NightLex</span>
  </div>
 </footer>
