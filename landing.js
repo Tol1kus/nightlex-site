@@ -48,8 +48,8 @@ function setLang(l){LANG=l;var d=l==='en'?EN:l==='da'?DA:UK;root.lang=l;
  buildTicker();quizRender();readerBuild();paceSet(PACE,true);try{shotsRecolor()}catch(e){}}
 var saved=null;try{saved=localStorage.getItem('nx-landing-lang')}catch(e){}
 var q=/[?&]lang=(en|uk|da)/.exec(location.search);
-// мова браузера: українська (і російська) → UA, данська (і норвезька) → DA, решта → EN; вибір кнопкою запам'ятовується
-function browserLang(){var ls=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'uk']);for(var i=0;i<ls.length;i++){var c=String(ls[i]).toLowerCase().slice(0,2);if(c==='uk'||c==='ru')return 'uk';if(c==='da'||c==='nb'||c==='no'||c==='nn')return 'da';if(c==='en')return 'en'}return 'en'}
+// мова браузера: українська → UA, данська → DA, англійська й усі інші → EN; вибір кнопкою запам'ятовується
+function browserLang(){var ls=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'uk']);for(var i=0;i<ls.length;i++){var c=String(ls[i]).toLowerCase().slice(0,2);if(c==='uk')return 'uk';if(c==='da')return 'da';if(c==='en')return 'en'}return 'en'} // 22.11.2026 (автор): українська → UA, данська → DA, англійська й усі інші → EN
 var PATHS={uk:'/',en:'/en/',da:'/da/'},forced=root.getAttribute('data-lang'),isBot=/bot|crawl|spider|slurp|lighthouse|preview/i.test(navigator.userAgent||'');
 var startLang=forced||(q?q[1]:saved||(isBot?'uk':browserLang()));
 // головна сторінка без ?lang: людина з англійським / данським браузером — одразу на свою адресу (пошуковики лишаються на українській)
